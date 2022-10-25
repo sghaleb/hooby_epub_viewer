@@ -1,4 +1,4 @@
-# Vocsy Epub Viewer [![pub package](https://img.shields.io/pub/v/vocsy_epub_viewer.svg)](https://pub.dartlang.org/packages/vocsy_epub_viewer)
+# Hooby Epub Viewer [![pub package](https://img.shields.io/pub/v/vocsy_epub_viewer.svg)](https://pub.dartlang.org/packages/vocsy_epub_viewer)
 
 
 originally a fork of [epub_kitty](https://github.com/451518849/epub_kitty) with few more features.
@@ -45,7 +45,7 @@ platform :ios, '9.0'
 Import into pubspec.yaml
 ```
 dependencies:
-  vocsy_epub_viewer: latest_version
+  hooby_epub_viewer: latest_version
 ```
 
 Note: Please add this to the release build type in your app build.gradle to avoid crashes on android release builds
