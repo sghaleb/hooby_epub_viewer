@@ -12,7 +12,7 @@ part 'utils/util.dart';
 
 class EpubViewer {
   static const MethodChannel _channel =
-      const MethodChannel('vocsy_epub_viewer');
+      const MethodChannel('hooby_epub_viewer');
   static const EventChannel _pageChannel = const EventChannel('page');
 
   /// Configure Viewer's with available values

@@ -1,4 +1,4 @@
-package com.vocsy.epub_viewer;
+package com.meeshosoft.epub_viewer;
 
 import android.app.Activity;
 import android.content.Context;
@@ -19,7 +19,7 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import androidx.annotation.NonNull;
 
 /** EpubReaderPlugin */
-public class EpubViewerPlugin implements MethodCallHandler, FlutterPlugin, ActivityAware {
+public class EpubViewerPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware {
 
   private Reader reader;
   private ReaderConfig config;
@@ -29,7 +29,7 @@ public class EpubViewerPlugin implements MethodCallHandler, FlutterPlugin, Activ
   static BinaryMessenger messenger;
   static private EventChannel eventChannel;
   static private EventChannel.EventSink sink;
-  private static final String channelName = "vocsy_epub_viewer";
+  private static final String channelName = "hooby_epub_viewer";
 
   /** Plugin registration. */
   public static void registerWith(Registrar registrar) {
@@ -55,7 +55,7 @@ public class EpubViewerPlugin implements MethodCallHandler, FlutterPlugin, Activ
     });
 
 
-    final MethodChannel channel = new MethodChannel(registrar.messenger(), "vocsy_epub_viewer");
+    final MethodChannel channel = new MethodChannel(registrar.messenger(), "hooby_epub_viewer");
     channel.setMethodCallHandler(new EpubViewerPlugin());
 
   }

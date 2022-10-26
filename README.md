@@ -1,4 +1,4 @@
-# Hooby Epub Viewer [![pub package](https://img.shields.io/pub/v/vocsy_epub_viewer.svg)](https://pub.dartlang.org/packages/vocsy_epub_viewer)
+# Hooby Epub Viewer
 
 
 originally a fork of [epub_kitty](https://github.com/451518849/epub_kitty) with few more features.

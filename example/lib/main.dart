@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:vocsy_epub_viewer/epub_viewer.dart';
+import 'package:hooby_epub_viewer/epub_viewer.dart';
 
 void main() async {
   runApp(MyApp());
@@ -40,12 +40,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Vocsy Plugin example app'),
+          title: const Text('Meeshosoft Plugin example app'),
         ),
         body: Center(
           child: loading
               ? CircularProgressIndicator()
-              : FlatButton(
+              : TextButton(
                   onPressed: () async {
                     Directory appDocDir =
                         await getApplicationDocumentsDirectory();
@@ -67,20 +67,8 @@ class _MyAppState extends State<MyApp> {
                       print('LOCATOR: ${locator}');
                     });
 
-                    EpubViewer.open(
-                      filePath,
-                      lastLocation: EpubLocator.fromJson({
-                        "bookId": "2239",
-                        "href": "/OEBPS/ch06.xhtml",
-                        "created": 1539934158390,
-                        "locations": {
-                          "cfi": "epubcfi(/0!/4/4[simple_book]/2/2/6)"
-                        }
-                      }),
-                    );
-
-                    // await EpubViewer.openAsset(
-                    //   'assets/4.epub',
+                    // EpubViewer.open(
+                    //   filePath,
                     //   lastLocation: EpubLocator.fromJson({
                     //     "bookId": "2239",
                     //     "href": "/OEBPS/ch06.xhtml",
@@ -90,6 +78,18 @@ class _MyAppState extends State<MyApp> {
                     //     }
                     //   }),
                     // );
+
+                    await EpubViewer.openAsset(
+                      'assets/4.epub',
+                      lastLocation: EpubLocator.fromJson({
+                        "bookId": "2239",
+                        "href": "/OEBPS/ch06.xhtml",
+                        "created": 1539934158390,
+                        "locations": {
+                          "cfi": "epubcfi(/0!/4/4[simple_book]/2/2/6)"
+                        }
+                      }),
+                    );
                   },
                   child: Container(
                     child: Text('open epub'),

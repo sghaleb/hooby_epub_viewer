@@ -1,4 +1,4 @@
-package com.vocsy.epub_viewer;
+package com.meeshosoft.epub_viewer;
 
 import android.content.Context;
 import android.graphics.Color;
